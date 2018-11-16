@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,10 @@ namespace OneDriveMigrator
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }        
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OneDriveMigrator"
         mc:Ignorable="d"
-        Title="Migrating your Z: drive to your OneDrive" Height="316" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded">
+        Title="Migrating your Z: drive to your OneDrive" Height="316" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded" Topmost="True">
     <Grid Margin="0,0,0,2">
         <Image HorizontalAlignment="Left" Height="118" Margin="10,160,0,0" VerticalAlignment="Top" Width="138" Source="OneDriveLogo.png"/>
         <TextBox Name="txtBatchOutput" Margin="153,10,12,12" TextWrapping="Wrap" IsReadOnly="True" IsReadOnlyCaretVisible="False" Cursor="Arrow" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">            

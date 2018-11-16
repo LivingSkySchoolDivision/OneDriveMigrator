@@ -5,20 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OneDriveMigrator"
         mc:Ignorable="d"
-        Title="DoneHelpWindow" Height="612.605" Width="1290.336" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderBrush="Black" BorderThickness="1">
+        Title="DoneHelpWindow" Height="668.062" Width="784.984" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderBrush="Black" BorderThickness="1" Loaded="Window_Loaded" Topmost="True">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FF7C7C7C" Offset="1"/>
-                <GradientStop Color="White" Offset="0.594"/>
+                <GradientStop Color="#FFDEDEDE" Offset="1"/>
+                <GradientStop Color="White" Offset="0.715"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Image HorizontalAlignment="Left" Height="616" VerticalAlignment="Top" Width="616" Source="OneDriveFileExplorer.png"/>
-        <TextBlock HorizontalAlignment="Left" Margin="646,10,0,0" TextWrapping="Wrap" Text="OneDrive Migration Complete!" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Width="610"/>
-        <TextBlock Margin="646,47,28,0" TextWrapping="Wrap" FontSize="16" Height="140" VerticalAlignment="Top"><LineBreak/><Run Text="Your files can now be found under "/><Run FontWeight="Bold" Text="OneDrive - Living Sky School Division"/><Run Text=" in Windows File Explorer."/><LineBreak/><LineBreak/><Run Text="You can access your files from home, or anywhere else with an Internet connection, by signing into "/><Hyperlink Click="Hyperlink_Click"><Run Text="https://onedrive.com"/></Hyperlink></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,443,0,0" TextWrapping="Wrap" Text="OneDrive Migration Complete!" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Width="610"/>
+        <TextBlock Margin="10,480,0,0" TextWrapping="Wrap" FontSize="16" Height="140" VerticalAlignment="Top" HorizontalAlignment="Left" Width="763"><LineBreak/><Run Text="Your files can now be found under "/><Run FontWeight="Bold" Text="OneDrive - Living Sky School Division"/><Run Text=" in Windows File Explorer."/><LineBreak/><LineBreak/><Run Text="You can access your files from home, or anywhere else with an Internet connection, by signing into "/><Hyperlink Click="Hyperlink_Click"><Run Text="https://onedrive.com"/></Hyperlink></TextBlock>
         <Button Name="btnClose" Content="OK" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Click="btnClose_Click"/>
-        <Image HorizontalAlignment="Left" Height="334" Margin="945,242,0,0" VerticalAlignment="Top" Width="315" Source="OneDriveLogo.png"/>
-        <Image HorizontalAlignment="Left" Height="334" Margin="646,242,0,0" VerticalAlignment="Top" Width="294" Source="Living Sky SD Transparent Logo.gif"/>
+        <Image Height="438" Margin="0,0,0,0" VerticalAlignment="Top" Source="OneDriveFileExplorer.png"/>
+        <Image HorizontalAlignment="Left" Height="118" Margin="667,0,0,538" VerticalAlignment="Bottom" Width="106" Source="Living Sky SD Transparent Logo.gif"/>
 
     </Grid>
 </Window>

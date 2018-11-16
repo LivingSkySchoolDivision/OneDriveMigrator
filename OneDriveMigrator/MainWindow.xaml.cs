@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,8 @@ namespace OneDriveMigrator
     public partial class MainWindow : Window
     {
         private static bool done = false;
-        private static bool complete = false;
+
+        private const string markerFileName = @"Z:\ONEDRIVEMIGRATED";
 
         public MainWindow()
         {
@@ -80,6 +82,21 @@ namespace OneDriveMigrator
 
                     if (batchFile.ExitCode == 0)
                     {
+                        // Create a hidden file in the user's Z: drive to flag it
+                        try
+                        {
+                            using (FileStream fs = new FileStream(markerFileName, FileMode.OpenOrCreate))
+                            {
+                                using (StreamWriter writer = new StreamWriter(fs, Encoding.UTF8))
+                                {
+                                    writer.WriteLine(DateTime.Now + "\tOnedrive successfully migrated");
+                                }
+
+                                File.SetAttributes(markerFileName, File.GetAttributes(markerFileName) | FileAttributes.Hidden);
+                            }
+                        }
+                        catch { }
+
                         this.Dispatcher.Invoke(() => {
                             DoneHelpWindow doneWindow = new DoneHelpWindow();
                             doneWindow.Show();
@@ -101,6 +118,15 @@ namespace OneDriveMigrator
                 }
             });           
             
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Dispatcher.Invoke(() => {
+                DoneHelpWindow doneWindow = new DoneHelpWindow();
+                doneWindow.Show();
+                this.Close();
+            });
         }
     }
 }
